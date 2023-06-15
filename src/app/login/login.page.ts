@@ -99,6 +99,20 @@ export class LoginPage implements OnInit {
     username: '',
     password: ''
   };
+  admins=[
+    {
+      'corrreo':'obed.castro@uab.edu.bo',
+      'password':'12345678',
+       
+    },
+    {
+      'nombre':'jose.guzman@uab.edu.bo',
+      'password':'12345678',
+
+
+    }
+  
+  ]
 
   constructor(private fb: FormBuilder, private servicio: ApiService, private route: Router, private storage: Storage
     ,    private alertController: AlertController,
@@ -123,6 +137,13 @@ export class LoginPage implements OnInit {
   async login() {
     this.submitted = true;
     this.validateForm();
+    console.log(this.admins[0]);
+    const objetoEncontrado = this.admins.find(admin => admin.corrreo === this.formulariologin.value.username && admin.password === this.formulariologin.value.password);
+
+if (objetoEncontrado) {
+  console.log('El objeto está presente en la lista:', objetoEncontrado);
+} else {
+  console.log('El objeto no está presente en la lista');
 
     if (this.formulariologin.valid) {
       this.loading = await this.loadingController.create({
@@ -148,7 +169,7 @@ export class LoginPage implements OnInit {
         }
       );
     }
-  }
+  }}
   validateForm() {
     const formControls = this.formulariologin.controls;
 

@@ -41,8 +41,8 @@ const routes: Routes = [
     loadChildren: () => import('./register-hospital/register-hospital.module').then( m => m.RegisterHospitalPageModule)
   },
   {
-    path: 'registromedicos',
-    loadChildren: () => import('./registromedicos/registromedicos.module').then( m => m.RegistromedicosPageModule)
+    path: 'register-hospital',
+    loadChildren: () => import('./register-hospital/register-hospital.module').then( m => m.RegisterHospitalPageModule)
   },
 
   { path: 'list-user', component: ListUserPage },
