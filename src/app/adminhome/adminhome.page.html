@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ welcomeMessage }}, Administrador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="image-container">
+    <img src="./assets/img/logo_robot.png" style="text-align: center;" height="200px" alt="Imagen de Administrador">
+  </div>
+  <ion-grid>
+    <ion-row>
+      <!-- <button class="btn mt-3"  routerLink="/register-hospital">Registrar Hospital</button> -->
+
+      <ion-col  routerLink="/register-hospital" size="6" class="ion-text-center">
+        <ion-icon name="document-text" class="icon"></ion-icon>
+        <p>REGISTRAR HOSPITAL</p>
+      </ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <ion-icon name="clipboard" class="icon"></ion-icon>
+        <p>Opción 2</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" class="ion-text-center">
+        <ion-icon name="stats-chart" class="icon"></ion-icon>
+        <p>Opción 3</p>
+      </ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <ion-icon name="settings" class="icon"></ion-icon>
+        <p>Opción 4</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="full" color="primary"routerLink="/login" class="logout-button">
+    <ion-icon name="log-out" class="icon"></ion-icon>
+    Cerrar sesión
+  </ion-button>
+</ion-content>

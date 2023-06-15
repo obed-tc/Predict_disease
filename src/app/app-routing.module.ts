@@ -49,6 +49,10 @@ const routes: Routes = [
   { path: 'registromedicos/medico/:id', component: RegistromedicosPage },
     
   { path: 'visualizacion-pdf/:id/:enfermedadId', component: VisualizacionPdfPage },
+  {
+    path: 'adminhome',
+    loadChildren: () => import('./adminhome/adminhome.module').then( m => m.AdminhomePageModule)
+  },
   
 ];
 

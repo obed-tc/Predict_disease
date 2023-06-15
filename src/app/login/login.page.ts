@@ -142,6 +142,8 @@ export class LoginPage implements OnInit {
 
 if (objetoEncontrado) {
   console.log('El objeto está presente en la lista:', objetoEncontrado);
+  this.route.navigate(['/adminhome']);
+
 } else {
   console.log('El objeto no está presente en la lista');
 
