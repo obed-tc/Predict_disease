@@ -48,6 +48,15 @@ const routes: Routes = [
   { path: 'list-user', component: ListUserPage },
   { path: 'registromedicos/medico/:id', component: RegistromedicosPage },
     
+  { path: 'visualizacion-pdf/:id/:enfermedadId', component: VisualizacionPdfPage },  {
+    path: 'administracion',
+    loadChildren: () => import('./administracion/administracion.module').then( m => m.AdministracionPageModule)
+  },
+
+<<<<<<< HEAD
+  { path: 'list-user', component: ListUserPage },
+  { path: 'registromedicos/medico/:id', component: RegistromedicosPage },
+    
   { path: 'visualizacion-pdf/:id/:enfermedadId', component: VisualizacionPdfPage },
   {
     path: 'adminhome',
@@ -63,3 +72,15 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+=======
+  
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+>>>>>>> 9fe2c0f41ce37827b06e77726f082eee3d35ba3b
