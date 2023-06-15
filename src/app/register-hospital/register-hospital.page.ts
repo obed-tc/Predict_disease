@@ -15,12 +15,13 @@ export class RegisterHospitalPage implements OnInit {
   formularioregistro: FormGroup;
   submitted = false;
   registroExitoso = false;
+  hospitalId: string
 
   constructor(
     private fb: FormBuilder,
     private servicio: ApiService,
     private route: Router,
-    private toastController: ToastController
+    private toastController: ToastController,
   ) {}
 
   ngOnInit() {

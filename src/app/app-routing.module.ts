@@ -48,7 +48,11 @@ const routes: Routes = [
   { path: 'list-user', component: ListUserPage },
   { path: 'registromedicos/medico/:id', component: RegistromedicosPage },
     
-  { path: 'visualizacion-pdf/:id/:enfermedadId', component: VisualizacionPdfPage },
+  { path: 'visualizacion-pdf/:id/:enfermedadId', component: VisualizacionPdfPage },  {
+    path: 'administracion',
+    loadChildren: () => import('./administracion/administracion.module').then( m => m.AdministracionPageModule)
+  },
+
   
 ];
 

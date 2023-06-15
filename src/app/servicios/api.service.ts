@@ -164,6 +164,7 @@ export class ApiService {
   public obtenerDatosMedico(id: number): Observable<any> {
     return this.http.get(`${this.url}/medico/${id}/`);
   }
+  
   public getMedicos(id: number): Observable<any> {
     return this.http.get(`${this.url}/medico/${id}/`);
   }
