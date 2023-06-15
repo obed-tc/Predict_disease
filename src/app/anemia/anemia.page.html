@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="titulo">anemia</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/mis-casas"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <div class="formulario">
+      <h2>Formulario de Anemia</h2>
+      <form (ngSubmit)="enviarFormulario2()">
+        <div class="campo">
+          <label for="paciente">Nombre de Paciente:</label>
+          <ion-searchbar id="paciente" name="paciente" [(ngModel)]="searchTerm" (ionChange)="buscarPacientes()"
+            [value]="pacienteSeleccionado?.nombre"></ion-searchbar>
+          <ion-list *ngIf="pacientes.length > 0">
+            <ion-item-sliding *ngFor="let paciente of pacientes" class="campo">
+              <ion-item [ngClass]="{ 'seleccionado': paciente === pacienteSeleccionado }"
+                (click)="seleccionarPaciente(paciente)">
+                {{ paciente.nombre }} {{ paciente.apellido }}
+              </ion-item>
+              <ion-item-options side="end">
+                <ion-item-option color="primary" (click)="realizarAccion(paciente)">
+                  Realizar acción
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>
+        </div>
+        <div class="campo">
+          <label for="genero">Género:</label>
+          <select id="genero" name="genero" [(ngModel)]="genero" required>
+            <option value="">Seleccione</option>
+            <option value="0">Femenino</option>
+            <option value="1">Masculino</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="Hemogobina">Hemogobina:</label>
+          <input type="number" id="Hemogobina" name="Hemogobina" [(ngModel)]="Hemogobina" required>
+        </div>
+
+        <div class="campo">
+          <label for="MCH">MCH:</label>
+          <input type="number" id="MCH" name="MCH" [(ngModel)]="MCH" required>
+        </div>
+
+        <div class="campo">
+          <label for="MCHC">MCHC:</label>
+          <input type="number" id="MCHC" name="MCHC" [(ngModel)]="MCHC" required>
+        </div>
+
+        <div class="campo">
+          <label for="MCV">MCV:</label>
+          <input type="number" id="MCV" name="MCV" [(ngModel)]="MCV" required>
+        </div>
+
+        <div class="boton-enviar">
+        <ion-button type="submit" expand="block" color="primary">Enviar</ion-button>
+      </div>
+      </form>
+    </div>
+  </ion-card>
+  <div class="mensaje-exito" *ngIf="exito">{{ exito }}</div>
+  <div class="mensaje-error" *ngIf="error">{{ error }}</div>
+</ion-content>
+

@@ -1,0 +1,428 @@
+ <!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/registros"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="usuario">
+  <div *ngIf="enfermedad === 'diabetes'">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Información de Diabetes</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Nombre: {{ paciente.nombreUsuario }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Género: {{ paciente.genero }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Hipertensión: {{ paciente.hipertencion }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Cardiopatía: {{ paciente.cardiopatia }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fumador: {{ paciente.fumador }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>MCI: {{ paciente.MCI }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Niveles de Hemoglobina: {{ paciente.nivelesHemoglobina }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Niveles de Glucosa: {{ paciente.nivelGlucosa }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Resultado: {{ paciente.resultado }}</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="enfermedad === 'anemia'">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Información de Anemia</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Nombre: {{ usuario.nombreUsuario }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Género: {{ usuario.genero }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Hemoglobina: {{ usuario.Hemogobina }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>MCH: {{ usuario.MCH }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>MCHC: {{ usuario.MCHC }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Resultado: {{ usuario.Resultado }}</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="enfermedad === 'cancerPulmonar'">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Información de Cáncer de Pulmón</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Nombre: {{ usuario.nombreUsuario }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Género: {{ usuario.Genero }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Edad: {{ usuario.edad }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Consumo de Alcohol: {{ usuario.ConsumoAlcohol }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Alergia al Polvo: {{ usuario.AlergiaPolvo }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Registro Genético: {{ usuario.RegistroGenetico }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Enfermedad Pulmonar: {{ usuario.EnfermedadPulmonar }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Dieta Equilibrada: {{ usuario.DietaEquilibrada }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Obesidad: {{ usuario.Obesidad }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tabaquismo: {{ usuario.Tabaquismo }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fumador Pasivo: {{ usuario.FumadorPasivo }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Dolor en el Pecho: {{ usuario.DolorPecho }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tos con Sangre: {{ usuario.TosConSangre }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fatiga: {{ usuario.fatiga }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Pérdida de Peso: {{ usuario.PerdidaPeso }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Dificultad para Respirar: {{ usuario.DificultadRespirar }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Sibilancia: {{ usuario.Sibilancia }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Dificultad para Tragar: {{ usuario.DificultadTragar }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tos Seca: {{ usuario.TosSeca }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Resultado: {{ usuario.resultados }}</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+
+  <ion-button expand="full" (click)="generarPDF()">Exportar PDF</ion-button>
+</ion-content>  -->
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+<!-- 
+<ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Paciente: {{ paciente?.Nombre }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content *ngIf="paciente && (anemia || diabetes || cancerPulmonar)">
+    <ion-item *ngIf="anemia">
+      <ion-label>Anemia:</ion-label>
+      <ion-text>{{ anemia.nombre }}</ion-text>
+    </ion-item>
+
+    <ion-item *ngIf="diabetes">
+      <ion-label>Diabetes:</ion-label>
+      <ion-text>{{ diabetes.nombre }}</ion-text>
+    </ion-item>
+
+    <ion-item *ngIf="cancerPulmonar">
+      <ion-label>Cáncer Pulmonar:</ion-label>
+      <ion-text>{{ cancerPulmonar.nombre }}</ion-text>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+</ion-content>  -->
+
+
+
+<!-- 
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Visualización PDF
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let enfermedad of enfermedades">
+    <ion-card-header>
+      <ion-card-title>
+        <ng-container [ngSwitch]="enfermedad.id">
+          <ng-container *ngSwitchCase="23 ">
+            Enfermedad de anemia
+          </ng-container>
+          <ng-container *ngSwitchCase="2">
+            Enfermedad de cáncer
+          </ng-container>
+          <ng-container *ngSwitchCase="13">
+            Enfermedad de diabetes
+          </ng-container>
+        </ng-container>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>ID: {{ enfermedad.id }}</p>
+      <ng-container [ngSwitch]="enfermedad.id">
+        <ng-container *ngSwitchCase="23">
+          <p>Hemoglobina: {{ enfermedad.Hemogobina }}</p>
+          <p>MCH: {{ enfermedad.MCH }}</p>
+          <p>MCHC: {{ enfermedad.MCHC }}</p>
+          <ion-button (click)="exportPdf(enfermedad)">Exportar a PDF</ion-button>
+        </ng-container>
+        <ng-container *ngSwitchCase="2">
+          <p>Edad: {{ enfermedad.edad }}</p>
+          <p>Género: {{ enfermedad.Genero }}</p>
+          <p>Consumo de Alcohol: {{ enfermedad.ConsumoAlcohol }}</p>
+          <p>Alergia al Polvo: {{ enfermedad.AlergiaPolvo }}</p>
+          <ion-button (click)="exportPdf(enfermedad)">Exportar a PDF</ion-button>
+        </ng-container>
+        <ng-container *ngSwitchCase="13">
+          <p>Género: {{ enfermedad.genero }}</p>
+          <p>Hipertensión: {{ enfermedad.hipertencion }}</p>
+          <p>Cardiopatía: {{ enfermedad.cardiopatia }}</p>
+          <p>Fumador: {{ enfermedad.fumador }}</p>
+          <ion-button (click)="exportPdf(enfermedad)">Exportar a PDF</ion-button>
+        </ng-container>
+      </ng-container>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Visualización PDF</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Datos del Paciente</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Nombre: {{ paciente?.nombre }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Apellido: {{ paciente?.apellido }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Correo Electrónico: {{ paciente?.correo_electronico }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Peso: {{ paciente?.peso }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Altura: {{ paciente?.altura }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dirección: {{ paciente?.direccion }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Número Celular: {{ paciente?.numero_celular }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>CI: {{ paciente?.ci }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="enfermedades && enfermedades.length > 0">
+    <ng-container *ngFor="let enfermedad of enfermedades">
+      <ion-card *ngIf="enfermedad.enfermedad === 'anemia'">
+        <ion-card-header>
+          Anemia
+        </ion-card-header>
+        <ion-card-content>
+          <!-- Mostrar los datos de la enfermedad de anemia aquí -->
+          <ion-item>
+          <ion-label>Hemoglobina: {{ enfermedad.datos.Hemogobina }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>MCH: {{ enfermedad.datos.MCH }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>MCHC: {{ enfermedad.datos.MCHC }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>MCV: {{ enfermedad.datos.MCV }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Resultado: {{ enfermedad.datos.Resultado }}</ion-label>
+        </ion-item>
+        <ion-button (click)="exportarPdf(enfermedad)">Exportar PDF</ion-button>
+        </ion-card-content>
+      </ion-card>
+  
+      <ion-card *ngIf="enfermedad.enfermedad === 'diabetes'">
+        <ion-card-header>
+          Diabetes
+        </ion-card-header>
+        <ion-card-content>
+          <!-- Mostrar los datos de la enfermedad de diabetes aquí -->
+          <ion-item>
+          <ion-label>Hipertensión: {{ enfermedad.datos.hipertencion }}</ion-label>
+        </ion-item>
+          <ion-item>
+          <ion-label>Cardiopatía: {{ enfermedad.datos.cardiopatia }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fumador: {{ enfermedad.datos.fumador }}</ion-label>
+        </ion-item>
+          <ion-item>
+          <ion-label>MCI: {{ enfermedad.datos.MCI }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Niveles de Hemoglobina: {{ enfermedad.datos.nivelesHemoglobina }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Nivel de Glucosa: {{ enfermedad.datos.nivelGlucosa }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Edad: {{ enfermedad.datos.edad }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Resultado: {{ enfermedad.datos.resultado }}</ion-label>
+        </ion-item>
+        <ion-button (click)="exportarPdf(enfermedad)">Exportar PDF</ion-button>
+        </ion-card-content>
+      </ion-card>
+  
+      <!-- Puedes agregar más tarjetas para otras enfermedades aquí -->
+  
+    </ng-container>
+  </ion-card>
+  
+  <ion-card *ngIf="!enfermedades || enfermedades.length === 0">
+    <ion-card-header>
+      Enfermedades del Paciente
+    </ion-card-header>
+    <ion-card-content>
+      El paciente no tiene enfermedades registradas.
+    </ion-card-content>
+  </ion-card>
+</ion-content>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-content>
+  <ion-card *ngIf="paciente">
+    <ion-card-header>
+      <ion-card-title>Paciente: {{ paciente.nombreUsuario }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label>Nombre: {{ paciente.nombre }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-label>Correo Electrónico: {{ paciente.correo_electronico }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>Edad: {{ paciente.edad }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="barbell" slot="start"></ion-icon>
+        <ion-label>Peso: {{ paciente.peso }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="resize" slot="start"></ion-icon>
+        <ion-label>Altura: {{ paciente.altura }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="location" slot="start"></ion-icon>
+        <ion-label>Dirección: {{ paciente.direccion }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" slot="start"></ion-icon>
+        <ion-label>Número Celular: {{ paciente.numero_celular }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-label>CI: {{ paciente.ci }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="enfermedades && enfermedades.length > 0">
+    <ion-card-header>
+      <ion-card-title>Enfermedades del Paciente</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let enfermedad of enfermedades">
+          <ion-icon name="medkit" slot="start"></ion-icon>
+          <ion-label>{{ enfermedad.nombre }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
